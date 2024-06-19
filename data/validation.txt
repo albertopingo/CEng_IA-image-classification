@@ -1,0 +1,14 @@
+#We are using 4/5 train directories for training, and the remaining for validation.
+
+# My validation directory is **train5**
+
+## Calculating the directory for validation 
+(I'm doing the projeto alone, so i will use both my last two digits)
+
+00000XY
+(X+Y) % 5 + 1 = trainZ
+
+
+Student number: 2202145
+x = 4 | y = 5
+(4 + 5) % 5 + 1 = 5 = train5 
