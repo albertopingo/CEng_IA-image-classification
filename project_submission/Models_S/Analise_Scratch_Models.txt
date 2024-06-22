@@ -1,0 +1,27 @@
+Comparação dos dois Modelos from Scratch realizado:
+
+O Modelo S01 é um modelo mais complexo e que apresenta melhores resultados em relação ao S02.
+Em ambos os casos, data augmentation ajudou bastante na questão de overfitting, aumentando a accuracy de validação.
+
+Modelo S01:
+O Modelo S01 é baseado em 2 blocos de duplas de camadas Convolucionais diretamente
+ligadas. Entre os blocos foi aplicado um Max pooling 2D de tamanho 2x2.
+
+Temos uma camada densa com 512 neurónios de forma a tentar perservar o
+máximo de informação para a camada classificadora de 10 classes.
+
+Foi usado kernel regularizers e dropouts entre blocos para evitar overfitting.
+Os pesos das camadas Convolucionais são inicializadas com 'he_normal', usado 
+frequentemente com a função de ativação 'relu'
+
+Modelo S02:
+O Modelo S02 é baseado em 3 blocos de camadas Convolucionais com Max Pooling de 2x2 entre blocos.
+Nas camadas Convolucionais, como foram utilizados 3 camadas de Max Pooling
+deixamos o padding como 'same' de modo a manter a forma e os features maps não ficarem demasiado pequenos.
+
+Nas Layers Densas ou fully connected layers foram utilizadas 2 camadas com 512 e 256 neuronios
+com dropout entre eles para evitar o overfitting neste modelo mais simples e capturar mais detalhes.
+
+Tendo em conta que foram utilizados Batch Normalization para ajudar a estabilizar e acelerar o treino.
+
+
